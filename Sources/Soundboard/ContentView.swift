@@ -29,7 +29,7 @@ struct ContentView: View {
             Circle()
                 .fill(motion.running ? .green : .red)
                 .frame(width: 9, height: 9)
-            Text(motion.running ? "Active" : "No sensor")
+            Text(motion.running ? motion.sensorMode : "Stopped")
                 .font(.caption)
                 .foregroundStyle(.secondary)
             Spacer()

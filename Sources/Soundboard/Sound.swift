@@ -27,7 +27,7 @@ enum Sound: Equatable, Hashable, Identifiable {
     func play() {
         switch self {
         case .system(let name):
-            NSSound(named: .init(rawValue: name))?.play()
+            NSSound(named: name)?.play()
         case .say(let text):
             let t = Process()
             t.executableURL = URL(fileURLWithPath: "/usr/bin/say")

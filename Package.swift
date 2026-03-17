@@ -7,7 +7,10 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "Soundboard",
-            path: "Sources/Soundboard"
+            path: "Sources/Soundboard",
+            linkerSettings: [
+                .linkedFramework("IOKit")
+            ]
         )
     ]
 )
